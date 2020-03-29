@@ -11,6 +11,7 @@ namespace electronika_api.Controllers
     [ApiController]
     public class HelloworldController : ControllerBase
     {
+        [HttpGet]
         public IActionResult hello()
         {
             return Content("hello");
