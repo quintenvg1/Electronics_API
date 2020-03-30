@@ -12,9 +12,16 @@ namespace electronika_api.Controllers
     public class HelloworldController : ControllerBase
     {
         [HttpGet]
-        public IActionResult hello()
+        public IActionResult hello(int id)
         {
-            return Content("hello");
+            return Content(id.ToString());
+        }
+
+        [HttpPost]
+
+        public IActionResult postresult(int id)
+        {
+            return Content(id.ToString());
         }
     }
 }
