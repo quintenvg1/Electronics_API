@@ -188,3 +188,7 @@ D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronika-api\bin\Deb
 D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronika-api\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\sqlite3.dll
 D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronika-api\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\sqlite3.dll
 D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronika-api\obj\Debug\netcoreapp3.1\electronika-api.MvcApplicationPartsAssemblyInfo.cache
+D:\documenten\cloud_api\Electronics_API\electronika-api\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libsqlite3.so
+D:\documenten\cloud_api\Electronics_API\electronika-api\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libsqlite3.dylib
+D:\documenten\cloud_api\Electronics_API\electronika-api\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\sqlite3.dll
+D:\documenten\cloud_api\Electronics_API\electronika-api\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\sqlite3.dll

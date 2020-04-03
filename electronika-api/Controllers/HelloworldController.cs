@@ -13,7 +13,7 @@ namespace electronika_api.Controllers
     {
         private manufacturer samsung = new manufacturer("samsung");
         public device newdevice = new device() { };
-        [HttpGet("get/{id}/{variable}")] //set the available rest variables
+        [HttpGet("get/{id}/{variable}")] //set the available rest variables hi/1/test as example
         public IActionResult hello(string variable, int id)
         {
             if (id == 1)
@@ -35,6 +35,7 @@ namespace electronika_api.Controllers
             newdevice.ID = id;
             newdevice.Devicename = variable;
             samsung.Devicelist.Add(newdevice);
+            //Console.WriteLine(samsung.Devicelist.ToString());
             return Content("back to main");
         }
     }

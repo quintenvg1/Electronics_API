@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Oabte8n7sZO3cEpiZZmaCdhofH/WImB+OcOU7fT3o6V263Ist1L87n7F8h9vkqzLFTpO540p91FaWt1dyHBGEQ==",
+  "dgSpecHash": "JXcmxFBYpSG9XfbHY2OaiedXGxBNhsi7pfxZo53PpJgVOuRNCz/SBsfOwHVbkbcE7hyuWmzgpMrksMxHE3Oj/Q==",
   "success": true,
   "projectFilePath": "D:\\documenten\\cloud_api\\Electronics_API\\electronika-api\\electronika-api.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,7 @@
     "C:\\Users\\quint\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\quint\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\quint\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\quint\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
     "C:\\Users\\quint\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\quint\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\quint\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
