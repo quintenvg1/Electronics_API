@@ -7,7 +7,7 @@ namespace electronika_api.Controllers
 {
 	public class main //initiate sql and data connection
 	{
-		//sqlconnect
+		//sqlconnect runs on a local virtual machine
 
 		//sql query
 

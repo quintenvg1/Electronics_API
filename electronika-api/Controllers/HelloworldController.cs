@@ -11,17 +11,31 @@ namespace electronika_api.Controllers
     [ApiController]
     public class HelloworldController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult hello(int id)
+        private manufacturer samsung = new manufacturer("samsung");
+        public device newdevice = new device() { };
+        [HttpGet("get/{id}/{variable}")] //set the available rest variables
+        public IActionResult hello(string variable, int id)
         {
-            return Content(id.ToString());
+            if (id == 1)
+            {
+                return Content(id.ToString());
+            }
+            else
+            {
+                return Content(variable.ToString() + " id");
+            }
+
         }
 
-        [HttpPost]
 
-        public IActionResult postresult(int id)
+        [HttpPost("post/{id}/{variable}")]
+
+        public IActionResult postresult(int id, string variable)
         {
-            return Content(id.ToString());
+            newdevice.ID = id;
+            newdevice.Devicename = variable;
+            samsung.Devicelist.Add(newdevice);
+            return Content("back to main");
         }
     }
 }

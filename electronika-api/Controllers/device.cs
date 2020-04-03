@@ -13,12 +13,14 @@ namespace electronika_api.Controllers
 		public double Price { get; set; }
 		public string Devicename { get; set; }
 
+		/*
 		//quick initializer
-		public device(int Id = 0, string devicename = "undefined", double price = 0.00)
+		private device(int Id = 0, string devicename = "undefined", double price = 0.00)
 		{
 			this.ID = Id;
 			this.Devicename = devicename;
 			this.Price = price;
 		}
+		*/
 	}
 }
