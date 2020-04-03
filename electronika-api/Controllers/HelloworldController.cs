@@ -28,14 +28,14 @@ namespace electronika_api.Controllers
         }
 
 
-        [HttpPost("post/{id}/{variable}")]
+        [HttpGet("post/{id}/{variable}")]
 
         public IActionResult postresult(int id, string variable)
         {
             newdevice.ID = id;
             newdevice.Devicename = variable;
             samsung.Devicelist.Add(newdevice);
-            //Console.WriteLine(samsung.Devicelist.ToString());
+            Console.WriteLine(samsung.Devicelist.ToString());
             return Content("back to main");
         }
     }
