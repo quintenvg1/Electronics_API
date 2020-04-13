@@ -32,11 +32,7 @@ namespace electronika_api.Controllers
 
         public IActionResult postresult(int id, string variable)
         {
-            newdevice.ID = id;
-            newdevice.Devicename = variable;
-            samsung.Devicelist.Add(newdevice);
-            Console.WriteLine(samsung.Devicelist.ToString());
-            return Content("back to main");
+
         }
     }
 }
