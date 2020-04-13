@@ -32,7 +32,7 @@ namespace electronika_api.Controllers
 
         public IActionResult postresult(int id, string variable)
         {
-
+            return Content(id.ToString() + "<-id | variable->" + variable.ToString());
         }
     }
 }

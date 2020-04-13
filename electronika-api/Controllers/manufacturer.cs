@@ -7,9 +7,10 @@ namespace electronika_api.Controllers
 {
 	public class manufacturer //this class is for the manufacturer a manufacturor has devices
 	{
+		public int ManufacturerID { get; set; } //related to device ManufacturorID
+		public ICollection<device> Mydevices { get; set; }
 		public string Name { get; set; } = "null";
 
-		public List<device> Devicelist { get; set; } = new List<device>();
 
 		public manufacturer(string name)
 		{
