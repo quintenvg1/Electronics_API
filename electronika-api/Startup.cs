@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using electronika_api.model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,21 +28,28 @@ namespace electronika_api
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddControllers();
+			services.AddDbContext<DeviceContext>(
+				options => options.UseSqlServer(
+					Configuration.GetConnectionString("DefaultConnection")
+					)
+				);
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DeviceContext devContext)
 		{
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
 			}
-
+			DBinitializer.Initialize(devContext);
 			app.UseHttpsRedirection();
 
 			app.UseRouting();
 
 			app.UseAuthorization();
+
+			app.UseMvc(); //manually added
 
 			app.UseEndpoints(endpoints =>
 			{

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using electronika_api.Controllers;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,6 @@ namespace electronika_api.model
         }
 
         public DbSet<device> Devices { get; set; }
-        public DbSet<manufacturor> Manufacturors { get; set; }
+        public DbSet<manufacturer> Manufacturors { get; set; }
     }
 }
