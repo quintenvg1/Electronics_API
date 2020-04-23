@@ -22,7 +22,7 @@ namespace electronika_api.Controllers
             }
             else
             {
-                return Content(variable.ToString() + " id");
+                return Content(variable.ToString() + " id " + id.ToString());
             }
 
         }

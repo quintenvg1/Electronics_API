@@ -33,6 +33,8 @@ namespace electronika_api
 					Configuration.GetConnectionString("DefaultConnection")
 					)
 				);
+			services.AddMvc();
+			services.AddCors();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,14 +44,13 @@ namespace electronika_api
 			{
 				app.UseDeveloperExceptionPage();
 			}
+			//app.UseMvc(); //i have to disable something in order to be able to use this
 			DBinitializer.Initialize(devContext);
 			app.UseHttpsRedirection();
 
 			app.UseRouting();
 
 			app.UseAuthorization();
-
-			app.UseMvc(); //manually added
 
 			app.UseEndpoints(endpoints =>
 			{
