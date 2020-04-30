@@ -1,5 +1,6 @@
 
 electronika-api/.vs/electronika-api/v16/.suo
+*.ide*
 
 # User-specific files
 *.rsuser
