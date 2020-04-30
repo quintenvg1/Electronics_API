@@ -339,8 +339,6 @@ D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\bin\Debu
 D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\obj\Debug\netcoreapp3.1\electronika-api.csprojAssemblyReference.cache
-D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\obj\Debug\netcoreapp3.1\electronika-api.csproj.CoreCompileInputs.cache
-D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\obj\Debug\netcoreapp3.1\electronika-api.MvcApplicationPartsAssemblyInfo.cache
 D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\obj\Debug\netcoreapp3.1\electronika-api.AssemblyInfoInputs.cache
 D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\obj\Debug\netcoreapp3.1\electronika-api.AssemblyInfo.cs
 D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\obj\Debug\netcoreapp3.1\electronika-api.RazorTargetAssemblyInfo.cache
@@ -350,3 +348,5 @@ D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\obj\Debu
 D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\obj\Debug\netcoreapp3.1\electronika-api.dll
 D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\obj\Debug\netcoreapp3.1\electronika-api.pdb
 D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\obj\Debug\netcoreapp3.1\electronika-api.genruntimeconfig.cache
+D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\obj\Debug\netcoreapp3.1\electronika-api.csproj.CoreCompileInputs.cache
+D:\documenten\cloud_api\Electronics_API\Electronics_API\electronika-api\obj\Debug\netcoreapp3.1\electronika-api.MvcApplicationPartsAssemblyInfo.cache
