@@ -9,7 +9,7 @@ namespace electronika_api.Controllers
 	{
 
 		public int ID { get; set; }
-
+		public string ManufaturorID { get; set; }
 		public double Price { get; set; }
 		public string Devicename { get; set; }
 
