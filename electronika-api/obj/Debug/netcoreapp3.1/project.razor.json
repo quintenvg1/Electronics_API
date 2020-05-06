@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "FilePath": "b:\\Documenten\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj",
+=======
+  "FilePath": "d:\\documenten\\schooljaar19-20\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj",
+>>>>>>> Stashed changes
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",

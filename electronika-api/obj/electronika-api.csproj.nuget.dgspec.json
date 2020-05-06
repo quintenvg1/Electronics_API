@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "B:\\Documenten\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj": {}
   },
   "projects": {
@@ -12,7 +13,23 @@
         "projectPath": "B:\\Documenten\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj",
         "packagesPath": "C:\\Users\\quint\\.nuget\\packages\\",
         "outputPath": "B:\\Documenten\\cloud apis\\Electronics_API\\electronika-api\\obj\\",
+=======
+    "D:\\documenten\\schooljaar19-20\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj": {}
+  },
+  "projects": {
+    "D:\\documenten\\schooljaar19-20\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\documenten\\schooljaar19-20\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj",
+        "projectName": "electronika-api",
+        "projectPath": "D:\\documenten\\schooljaar19-20\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj",
+        "packagesPath": "C:\\Users\\quint\\.nuget\\packages\\",
+        "outputPath": "D:\\documenten\\schooljaar19-20\\cloud apis\\Electronics_API\\electronika-api\\obj\\",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\quint\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -73,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
