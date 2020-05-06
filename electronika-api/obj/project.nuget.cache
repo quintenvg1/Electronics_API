@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fJZkl2Z2ID9Fn4kzHm9LRySY9bhv3ISbDFRXFxi5i4RWphPTZlObA0WNP0KAmRrXK3i6szHcf4ytqPsFvLD9jw==",
+  "dgSpecHash": "fwYQZ4my8aKnsMpnVhVyHw+CUXQSO19VwcHX9RstZSz+Sqgum9OWo4/R1aTBgxHefDMYn+S3VhhPggzt3XmXYQ==",
   "success": true,
-  "projectFilePath": "D:\\documenten\\cloud_api\\Electronics_API\\Electronics_API\\electronika-api\\electronika-api.csproj",
+  "projectFilePath": "B:\\Documenten\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\quint\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\quint\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

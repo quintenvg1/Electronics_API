@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\documenten\\cloud_api\\Electronics_API\\Electronics_API\\electronika-api\\electronika-api.csproj": {}
+    "B:\\Documenten\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj": {}
   },
   "projects": {
-    "D:\\documenten\\cloud_api\\Electronics_API\\Electronics_API\\electronika-api\\electronika-api.csproj": {
+    "B:\\Documenten\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\documenten\\cloud_api\\Electronics_API\\Electronics_API\\electronika-api\\electronika-api.csproj",
+        "projectUniqueName": "B:\\Documenten\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj",
         "projectName": "electronika-api",
-        "projectPath": "D:\\documenten\\cloud_api\\Electronics_API\\Electronics_API\\electronika-api\\electronika-api.csproj",
+        "projectPath": "B:\\Documenten\\cloud apis\\Electronics_API\\electronika-api\\electronika-api.csproj",
         "packagesPath": "C:\\Users\\quint\\.nuget\\packages\\",
-        "outputPath": "D:\\documenten\\cloud_api\\Electronics_API\\Electronics_API\\electronika-api\\obj\\",
+        "outputPath": "B:\\Documenten\\cloud apis\\Electronics_API\\electronika-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\quint\\AppData\\Roaming\\NuGet\\NuGet.Config",
