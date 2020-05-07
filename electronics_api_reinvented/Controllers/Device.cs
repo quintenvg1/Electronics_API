@@ -11,5 +11,13 @@ namespace electronics_api_reinvented.Controllers
 		public int DeviceId { get; set; } = 0;
 		public int VendorId { get; set; } = 1;
 		public double Price { get; set; } = 1.0;
+
+		public Device(string Name, int DeviceID, int VendorID, double price)
+		{
+			this.DeviceName = Name;
+			this.DeviceId = DeviceID;
+			this.VendorId = VendorID;
+			this.Price = price;
+		}
 	}
 }
