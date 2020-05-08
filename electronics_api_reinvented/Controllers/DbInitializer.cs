@@ -14,12 +14,9 @@ namespace electronics_api_reinvented.Controllers
 
 			if (!context.Devices.Any())
 			{
-				var device = new Device()
+				var device = new Device("name", 1 , 1, 1.0);
 				{
-					DeviceId = 0,
-					DeviceName = "Default device",
-					Price = 100.35,
-					VendorId = 1,
+					//the device was created
 				};
 
 				context.Devices.Add(device);

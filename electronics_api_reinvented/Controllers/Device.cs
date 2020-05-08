@@ -12,7 +12,7 @@ namespace electronics_api_reinvented.Controllers
 		public int VendorId { get; set; } = 1;
 		public double Price { get; set; } = 1.0;
 
-		public Device(string Name, int DeviceID, int VendorID, double price)
+		public Device(string Name = "null", int DeviceID = 0, int VendorID = 0, double price = 0.0)
 		{
 			this.DeviceName = Name;
 			this.DeviceId = DeviceID;
