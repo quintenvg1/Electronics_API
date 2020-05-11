@@ -360,7 +360,6 @@ D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronics_api_reinven
 D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronics_api_reinvented\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronics_api_reinvented\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronics_api_reinvented\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronics_api_reinvented\obj\Debug\netcoreapp3.1\electronics_api_reinvented.MvcApplicationPartsAssemblyInfo.cache
 B:\Documenten\cloud apis\Electronics_API\electronics_api_reinvented\obj\Debug\netcoreapp3.1\electronics_api_reinvented.csprojAssemblyReference.cache
 B:\Documenten\cloud apis\Electronics_API\electronics_api_reinvented\obj\Debug\netcoreapp3.1\electronics_api_reinvented.csproj.CoreCompileInputs.cache
 B:\Documenten\cloud apis\Electronics_API\electronics_api_reinvented\obj\Debug\netcoreapp3.1\electronics_api_reinvented.MvcApplicationPartsAssemblyInfo.cache
