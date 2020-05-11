@@ -34,7 +34,7 @@ namespace electronics_api_reinvented
 
 				.UseMySql("Server=localhost;Database=electronics_api;User=root;Password=1234;", mySqlOptions => mySqlOptions
 					// replace with your Server Version and Type
-					.ServerVersion(new Version(8, 0, 18), ServerType.MySql)
+					.ServerVersion(new Version(8, 0, 18), ServerType.MySql)));
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
