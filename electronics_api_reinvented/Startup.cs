@@ -28,8 +28,9 @@ namespace electronics_api_reinvented
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			//IServiceCollection.AddAuthorization();
 
+			services.AddAuthentication();
+			services.AddControllers();
 
 			services.AddDbContextPool<DeviceContext>(options => options
 
@@ -52,7 +53,7 @@ namespace electronics_api_reinvented
 
 			app.UseRouting();
 
-			app.UseAuthorization();
+			app.UseAuthentication();
 
 			app.UseEndpoints(endpoints =>
 			{
