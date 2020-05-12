@@ -496,3 +496,7 @@ B:\Documenten\cloud apis\Electronics_API\electronics_api_reinvented\obj\Debug\ne
 B:\Documenten\cloud apis\Electronics_API\electronics_api_reinvented\obj\Debug\netcoreapp3.1\staticwebassets\electronics_api_reinvented.StaticWebAssets.Manifest.cache
 B:\Documenten\cloud apis\Electronics_API\electronics_api_reinvented\obj\Debug\netcoreapp3.1\staticwebassets\electronics_api_reinvented.StaticWebAssets.xml
 B:\Documenten\cloud apis\Electronics_API\electronics_api_reinvented\obj\Debug\netcoreapp3.1\electronics_api_reinvented.genruntimeconfig.cache
+D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronics_api_reinvented\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronics_api_reinvented\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronics_api_reinvented\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+D:\documenten\schooljaar19-20\cloud apis\Electronics_API\electronics_api_reinvented\obj\Debug\netcoreapp3.1\electronics_api_reinvented.MvcApplicationPartsAssemblyInfo.cache

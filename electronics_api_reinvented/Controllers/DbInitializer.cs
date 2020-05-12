@@ -12,14 +12,13 @@ namespace electronics_api_reinvented.Controllers
 		{
 			context.Database.EnsureCreatedAsync();
 
-			if (!context.Devices.Any())
+			if (!context.device.Any())
 			{
-				var device = new Device("name", 1 , 1, 1.0);
-				{
-					//the device was created
-				};
+				//Device newdevice = new Device("test",0,0,0);
 
-				context.Devices.Add(device);
+
+				//context.Devices.Add(newdevice);
+				
 				context.SaveChanges();
 				//after the database was surely there the device was added
 			}
