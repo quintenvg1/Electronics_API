@@ -8807,17 +8807,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\quint\\.nuget\\packages\\": {}
+    "C:\\Users\\quint\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "B:\\Documenten\\cloud apis\\Electronics_API\\electronics_api_reinvented\\electronics_api_reinvented.csproj",
+      "projectUniqueName": "D:\\documenten\\schooljaar19-20\\cloud apis\\Electronics_API\\electronics_api_reinvented\\electronics_api_reinvented.csproj",
       "projectName": "electronics_api_reinvented",
-      "projectPath": "B:\\Documenten\\cloud apis\\Electronics_API\\electronics_api_reinvented\\electronics_api_reinvented.csproj",
+      "projectPath": "D:\\documenten\\schooljaar19-20\\cloud apis\\Electronics_API\\electronics_api_reinvented\\electronics_api_reinvented.csproj",
       "packagesPath": "C:\\Users\\quint\\.nuget\\packages\\",
-      "outputPath": "B:\\Documenten\\cloud apis\\Electronics_API\\electronics_api_reinvented\\obj\\",
+      "outputPath": "D:\\documenten\\schooljaar19-20\\cloud apis\\Electronics_API\\electronics_api_reinvented\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\quint\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -8890,7 +8894,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
