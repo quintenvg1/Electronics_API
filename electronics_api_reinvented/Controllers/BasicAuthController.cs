@@ -12,11 +12,17 @@ namespace electronics_api_reinvented.Controllers
 	[ApiController]
 	public class BasicAuthController : Controller
 	{
-
-		public IActionResult Login()
+		[HttpGet]
+		public IActionResult Login([FromHeader] string Authorization)
 		{
-			Response.Headers.Add("WWW-Authenticate", "basic");
+			var credentials = Authorization; //read username and password from header field
+			if (!string.IsNullOrEmpty(credentials))
+				return Ok("you were logged in"); //return an authorsation okay, based on database in future
+
+			Response.Headers.Add("WWW-Authenticate", "Basic");
 			return Unauthorized();
+			
+
 		}
 	}
 }
