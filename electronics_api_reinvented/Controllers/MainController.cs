@@ -25,7 +25,7 @@ namespace electronics_api_reinvented.Controllers
         {
             foreach (Vendor a in myvendors) 
             {
-               vendorlist += a.Vendor_Brand; //convert to string all the vendor names
+               vendorlist += a.Manufacturor_name; //convert to string all the vendor names
             }
             return (Content(vendorlist)); //workaround for json
         }
@@ -33,7 +33,7 @@ namespace electronics_api_reinvented.Controllers
         [HttpGet("vendors/new/{VendorId}/{vendorname}")]
         public void add_vendor(int VendorId, string vendorname)
         {
-            myvendors.Add(new Vendor(vendorname, VendorId));
+            myvendors.Add(new Vendor(/*vendorname, VendorId*/));
         }
 
 

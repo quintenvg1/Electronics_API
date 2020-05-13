@@ -1,24 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace electronics_api_reinvented.Controllers
 {
+	[Table("device")]
 	public class Device
 	{
 		/*
 		public Device(string Name, int DeviceID, int VendorID, double price)
 		{
-			this.DeviceName = Name;
+			this.device_name = Name;
 			this.DeviceId = DeviceID;
 			this.VendorId = VendorID;
 			this.Price = price;
 		}*/
-		public string DeviceName { get; set; } = "null";
-		public int DeviceId { get; set; } = 0;
-		public int VendorId { get; set; } = 1;
-		public double Price { get; set; } = 1.0;
+		public string device_name { get; set; } = "null";
+		[Key]
+		public int Device_ID { get; set; } = 0;
+		public int Manufaturor_ID { get; set; } = 1;
+		public double price { get; set; } = 1.0;
 
 
 	}

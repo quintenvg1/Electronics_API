@@ -18,7 +18,7 @@ namespace electronics_api_reinvented.Controllers //database for manufacturors an
 		public DbSet<Device> device { get; set; }
 		
 
-		//public DbSet<Vendor> Manufacturors {get; set;}
+		//public DbSet<Vendor> manufacturors {get; set;}
 		
 
 	}
