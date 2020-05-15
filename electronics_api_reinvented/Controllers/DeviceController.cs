@@ -31,6 +31,7 @@ namespace electronics_api_reinvented.Controllers
                 mycontext.Add(new Device() { Device_ID = Device_ID, device_name = device_name, Manufaturor_ID = Manufaturor_ID, price = price }); //add device to database
                 mycontext.SaveChanges(); //save the database
                 return Content("new device added"); //return the result
+
             }
             catch
             {

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ApiserviceService } from '../apiservice.service';
 
 @Component({
   selector: 'app-device-add',
@@ -14,10 +15,13 @@ export class DeviceAddComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor() {
+
+   }
 
   submit = () => {
-    alert(this.devicename);
+    alert("creating new device");
+
   }
 
   ngOnInit() {

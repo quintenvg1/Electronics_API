@@ -1,8 +1,9 @@
 <p>device-add works!</p>
 <ul>
-    <li>devicename <input type="text" [(ngModel)]="devicename"> </li>
-    <li><input type="text" [(ngModel)]="deviceID" ></li>
-    <li><input type="text" [(ngModel)]="manufacturorId" ></li>
+    <li>devicename <input type="text" placeholder="devicename" [(ngModel)]="devicename"> </li>
+    <li>deviceId       <input type="text" placeholder="deviceID" [(ngModel)]="deviceID" ></li>
+    <li>manufacturorId <input type="text" placeholder="manufacturorID" [(ngModel)]="manufacturorId" ></li>
+    <li>prijs          <input type="text" placeholder="price" [(ngModel)]="price"></li>
     <li><button (click)="submit()">submit</button></li>
 </ul>
 <div *ngIf="devicename">
