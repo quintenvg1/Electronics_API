@@ -12,7 +12,7 @@ namespace electronics_api_reinvented.Controllers
 		{
 			context.Database.EnsureCreatedAsync();
 
-			if (!context.device.Any())
+	if (!context.device.Any())
 			{
 				//Device newdevice = new Device() {DeviceId = 2, DeviceName = "huawei y5 2018", VendorId = 2, Price = 153.25}; //Example device
 

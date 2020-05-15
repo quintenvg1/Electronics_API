@@ -27,25 +27,47 @@ namespace electronics_api_reinvented.Controllers
             string device_name = name;
             double price = Price;
             int Manufaturor_ID = vendorID;
-            mycontext.Add(new Device() { Device_ID = Device_ID, device_name = device_name, Manufaturor_ID = Manufaturor_ID, price = price}) ; //add device to database
-            mycontext.SaveChanges(); //save the database
-            return Content("new device added"); //return the result
+            try {
+                mycontext.Add(new Device() { Device_ID = Device_ID, device_name = device_name, Manufaturor_ID = Manufaturor_ID, price = price }); //add device to database
+                mycontext.SaveChanges(); //save the database
+                return Content("new device added"); //return the result
+            }
+            catch
+            {
+                return Content("device was not created maybe a duplicate?");
+            }
+
         }
         [HttpGet("show/{deviceId}")] //read data from the database
-        public ActionResult showdevice(int ID)
+        public ActionResult showdevice(int deviceId)
         {
-            var Device_ID = ID; //to make a query on a given ID
-            
-            return Content("device[" + Device_ID + "]");
-            //return Content(mycontext.device.Find(Device_ID).ToString());
-        }
-
-        [HttpPost("update/{deviceID}/{vendorID}/{name}/{price}")] //update
-        public ActionResult update(int deviceID, int vendorID, string name, double price)
-        {
+            var Device_ID = deviceId; //to make a query on a given ID
+            var device = mycontext.device.Find(Device_ID);
             try
             {
-                mycontext.Update("where device.ID = deviceID values(deviceID, vendorID, name, price)"); //update the device where the id matches
+                return Content(device.device_name.ToString()); //returns the device if it exists
+            }
+            catch
+            {
+                return Content("the device doens't exsist");
+            }
+
+
+        }
+
+        [HttpPost("update/{deviceID}/{vendorID}/{name}/{Price}")] //update
+        public ActionResult update(int deviceID, int vendorID, string name, double Price)
+        {
+  
+            string device_name = name;
+            double price = Price;
+            int Manufaturor_ID = vendorID;
+            int Device_ID = deviceID;
+            var updated_device = new Device() { Device_ID = Device_ID, device_name = device_name, Manufaturor_ID = Manufaturor_ID, price = Price };
+            try
+            {
+                var device = mycontext.device.Find(Device_ID); //update the device where the id matches
+                //mycontext.Update(device, updated_device);
                 mycontext.SaveChanges();
                 return Content("updated device"); //return the succes message
             }
