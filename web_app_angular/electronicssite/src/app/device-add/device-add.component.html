@@ -1,1 +1,11 @@
 <p>device-add works!</p>
+<ul>
+    <li>devicename <input type="text" [(ngModel)]="devicename"> </li>
+    <li><input type="text" [(ngModel)]="deviceID" ></li>
+    <li><input type="text" [(ngModel)]="manufacturorId" ></li>
+    <li><button (click)="submit()">submit</button></li>
+</ul>
+<div *ngIf="devicename">
+    <p>{{ devicename }}</p>
+    <p>{{ deviceID }}</p>
+</div>

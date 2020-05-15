@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-device-add',
@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeviceAddComponent implements OnInit {
 
+  devicename: string;
+  deviceID: number;
+  manufacturorId: number;
+  price: number; //simple variables to create the new device from
+
+
+
   constructor() { }
+
+  submit = () => {
+    alert(this.devicename);
+  }
 
   ngOnInit() {
   }
