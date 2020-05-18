@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace electronics_api_reinvented.Controllers
 {
-    [Route("api/devicecontroller")]
+    [Route("api/device")]
     [ApiController]
     public class DeviceController : ControllerBase
     {
+        [Route("list")]
+        [HttpGet]
         public List<Device> GetDevices()
         {
             return mycontext.device.ToList(); //Create a list from the devices in the database
@@ -20,26 +22,26 @@ namespace electronics_api_reinvented.Controllers
             this.mycontext = Context;
         }
         private readonly DeviceContext mycontext;
-        [HttpGet("add/{deviceID}/{vendorID}/{name}/{Price}")] //create device for the database
-        public ActionResult addDevice(int DeviceId, int vendorID, string name, double Price)
+        //[HttpGet("add/{deviceID}/{vendorID}/{name}/{Price}")] //create device for the database
+        [HttpPost]
+        //public object addDevice([FromBody]int Device_ID, string device_name, double price, int Manufaturor_ID)
+        public ActionResult addDevice([FromBody]Device newdevice)
         {
-            int Device_ID = DeviceId;
-            string device_name = name;
-            double price = Price;
-            int Manufaturor_ID = vendorID;
+           
             try {
-                mycontext.Add(new Device() { Device_ID = Device_ID, device_name = device_name, Manufaturor_ID = Manufaturor_ID, price = price }); //add device to database
+                mycontext.Add(newdevice); //add device to database
                 mycontext.SaveChanges(); //save the database
-                return Content("new device added"); //return the result
+                return Ok(); //return the result
 
             }
             catch
             {
-                return Content("device was not created maybe a duplicate?");
+                return NotFound();
             }
 
         }
-        [HttpGet("show/{deviceId}")] //read data from the database
+        [Route("show")]
+        [HttpGet("{deviceId}")] //read data from the database
         public ActionResult showdevice(int deviceId)
         {
             var Device_ID = deviceId; //to make a query on a given ID
@@ -55,8 +57,8 @@ namespace electronics_api_reinvented.Controllers
 
 
         }
-
-        [HttpPost("update/{deviceID}/{vendorID}/{name}/{Price}")] //update
+        [Route("update")]
+        [HttpGet("{deviceID}/{vendorID}/{name}/{Price}")] //update
         public ActionResult update(int deviceID, int vendorID, string name, double Price)
         {
   
@@ -78,8 +80,8 @@ namespace electronics_api_reinvented.Controllers
             }
 
         }
-
-        [HttpGet("delete/{deviceID}")]
+        [Route("delete")]
+        [HttpGet("{deviceID}")]
         public ActionResult delete_device(int deviceID)
         {
             var Device_ID = deviceID;

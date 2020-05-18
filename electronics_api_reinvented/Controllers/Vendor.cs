@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace electronics_api_reinvented.Controllers
-{
+{	[Table("manufacturor")]
 	public class Vendor
 	{
 		public List<Device> MyDevices {get; set;} //list of devices
