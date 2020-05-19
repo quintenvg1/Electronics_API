@@ -3,41 +3,36 @@ import { HttpClient } from '@angular/common/http';
 
 
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class ApiserviceService {
 
-  private baseurl: string = "https://localhost:44364/api/device/";
+  private baseurl: string = "https://localhost:44364/api/device";
 
 
   constructor(private client:HttpClient) { 
     }
  
-  async postdevice(newdevice:device){
-    //console.log(this.client.get("https://localhost:44364/api/device/list"));
-    //console.log(this.client.post<device>("https://localhost:44364/api/device", newdevice));
-    return this.client.post<device>("https://localhost:44364/api/device", newdevice); //werkt niet    
+  postdevice(newdevice:Device){
+    return this.client.post<Device>(this.baseurl, newdevice);
   }
+
+
   
 }
 
 
-export class device{
+export class Device{
   Device_ID:number;
   device_name:string;
   price:number;
   Manufaturor_ID:number;
 }
 
-/*
-export interface Iadddevice{
-  DeviceID:number,
-  name:string,
-  Price:number,
-  vendorID:number,
+export interface IfindDevice{ //an interface to find a device on it's id
+  Device_ID:number
 }
-//not needed as the class is now used directly
-*/
+
+
 

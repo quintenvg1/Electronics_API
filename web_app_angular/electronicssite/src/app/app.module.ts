@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DeviceAddComponent } from './device-add/device-add.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DeviceListComponent } from './device-list/device-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    DeviceAddComponent
+    DeviceAddComponent,
+    DeviceListComponent
   ],
   imports: [
     BrowserModule,

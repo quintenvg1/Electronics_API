@@ -31,6 +31,11 @@ namespace electronics_api_reinvented
 
 			services.AddAuthentication();
 			services.AddControllers();
+			services.Configure<ApiBehaviorOptions>(options =>
+			{
+				options.SuppressModelStateInvalidFilter = true;
+			});
+
 
 			services.AddDbContextPool<DeviceContext>(options => options
 
@@ -46,6 +51,12 @@ namespace electronics_api_reinvented
 			{
 				app.UseDeveloperExceptionPage();
 			}
+
+			app.UseCors(builder =>
+			builder.AllowAnyOrigin()
+					.AllowAnyMethod()
+					.AllowAnyHeader()
+			);
 
 			DbInitializer.Initialize(devcontext);
 

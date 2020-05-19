@@ -25,13 +25,15 @@ namespace electronics_api_reinvented.Controllers
         //[HttpGet("add/{deviceID}/{vendorID}/{name}/{Price}")] //create device for the database
         [HttpPost]
         //public object addDevice([FromBody]int Device_ID, string device_name, double price, int Manufaturor_ID)
-        public ActionResult addDevice([FromBody]Device newdevice)
+        public ActionResult<Device> addDevice([FromBody]Device newdevice)
         {
-           
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             try {
                 mycontext.Add(newdevice); //add device to database
                 mycontext.SaveChanges(); //save the database
-                return Ok(); //return the result
+                return Created("", newdevice); //return the result
 
             }
             catch
