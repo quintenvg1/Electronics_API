@@ -8,14 +8,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiserviceService {
 
-  private baseurl: string = "https://localhost:44364/api/device";
+  private baseurl_device: string = "https://localhost:44364/api/device";
+  private baseurl_manufacturor: string = "https://localhost:44364/api/manufacturors";
 
 
   constructor(private client:HttpClient) { 
     }
  
   postdevice(newdevice:Device){
-    return this.client.post<Device>(this.baseurl, newdevice);
+    return this.client.post<Device>(this.baseurl_device, newdevice);
+  }
+
+  getDeviceList(){
+    return this.client.get<IDevice>(this.baseurl_device + "/list");
   }
 
 
@@ -32,6 +37,10 @@ export class Device{
 
 export interface IfindDevice{ //an interface to find a device on it's id
   Device_ID:number
+}
+
+export interface IDevice{
+  Device : Device[],
 }
 
 

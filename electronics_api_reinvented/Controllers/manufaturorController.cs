@@ -20,12 +20,12 @@ namespace electronics_api_reinvented.Controllers
         [Route("list")]
         public List<Manufaturor> GetManufacturors()
         {
-            return mycontext.manufacturors.ToList(); //Create a list from the devices in the database
+            return mycontext.manufacturors.ToList();
         }
         [HttpGet]
         public ActionResult GetAllManufacturors()
         {
-            return GetAllManufacturors();
+            return GetAllManufacturors(); //Create a list from the devices in the database
         }
 
 
