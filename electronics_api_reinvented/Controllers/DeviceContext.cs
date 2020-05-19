@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DbContext = Microsoft.EntityFrameworkCore.DbContext;
 
 
-namespace electronics_api_reinvented.Controllers //database for manufacturors and devices
+namespace electronics_api_reinvented.Controllers //database context for manufacturors and devices
 {
 	public class DeviceContext : DbContext
 	{
@@ -16,9 +16,7 @@ namespace electronics_api_reinvented.Controllers //database for manufacturors an
 		}
 
 		public DbSet<Device> device { get; set; }
-		
-
-		//public DbSet<Vendor> manufacturors {get; set;}
+	    public DbSet<Manufaturor> manufacturors { get; set;}
 		
 
 	}

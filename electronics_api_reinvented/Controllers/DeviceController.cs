@@ -23,7 +23,8 @@ namespace electronics_api_reinvented.Controllers
         }
         private readonly DeviceContext mycontext;
         //[HttpGet("add/{deviceID}/{vendorID}/{name}/{Price}")] //create device for the database
-        [HttpPost]
+
+        [HttpPost] //works completely
         //public object addDevice([FromBody]int Device_ID, string device_name, double price, int Manufaturor_ID)
         public ActionResult<Device> addDevice([FromBody]Device newdevice)
         {
@@ -42,8 +43,8 @@ namespace electronics_api_reinvented.Controllers
             }
 
         }
-        [Route("show")]
-        [HttpGet("{deviceId}")] //read data from the database
+        //[Route("show")]
+        [HttpGet("show/{deviceId}")] //read data from the database
         public ActionResult showdevice(int deviceId)
         {
             var Device_ID = deviceId; //to make a query on a given ID
