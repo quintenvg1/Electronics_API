@@ -22,6 +22,7 @@ export class DeviceAddComponent implements OnInit {
    }
 
   submit = () => {
+    this.deviceID = 0;
     alert("creating new device");
     this.apparaat.device_name = this.devicename;
     this.apparaat.Device_ID = parseInt(this.deviceID);

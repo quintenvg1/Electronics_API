@@ -11,19 +11,6 @@ namespace electronics_api_reinvented.Controllers
     [ApiController]
     public class DeviceController : ControllerBase
     {
-        [Route("list")]
-        [HttpGet]
-        public List<Device> GetDevices()
-        {
-            return mycontext.device.ToList(); //Create a list from the devices in the database
-        }
-        public DeviceController(DeviceContext Context)
-        {
-            this.mycontext = Context;
-        }
-        private readonly DeviceContext mycontext;
-        //[HttpGet("add/{deviceID}/{vendorID}/{name}/{Price}")] //create device for the database
-
         [HttpPost] //works completely
         //public object addDevice([FromBody]int Device_ID, string device_name, double price, int Manufaturor_ID)
         public ActionResult<Device> addDevice([FromBody]Device newdevice)
@@ -31,7 +18,8 @@ namespace electronics_api_reinvented.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            try {
+            try
+            {
                 mycontext.Add(newdevice); //add device to database
                 mycontext.SaveChanges(); //save the database
                 return Created("", newdevice); //return the result
@@ -43,7 +31,39 @@ namespace electronics_api_reinvented.Controllers
             }
 
         }
-        //[Route("show")]
+
+        [Route("list")]
+        [HttpGet]
+        public List<Device> GetDevices()
+        {
+            return mycontext.device.ToList(); //Create a list from the devices in the database
+        }
+
+
+        [HttpGet("list/{id}")]
+        public List<Device> Getspecificdevices(int ID)
+        {
+            List<Device> foundDevices = new List<Device>();
+            var devices = mycontext.device;
+            foreach(var Device in devices)
+            {
+                if(Device.Manufaturor_ID == ID)
+                {
+                    foundDevices.Add(Device);
+                }
+            }
+            return foundDevices;
+        }
+        public DeviceController(DeviceContext Context)
+        {
+            this.mycontext = Context;
+        }
+        private readonly DeviceContext mycontext;
+        //[HttpGet("add/{deviceID}/{vendorID}/{name}/{Price}")] //create device for the database
+
+        
+            /*
+        //[Route("show")] //depricated
         [HttpGet("show/{deviceId}")] //read data from the database
         public ActionResult showdevice(int deviceId)
         {
@@ -60,6 +80,7 @@ namespace electronics_api_reinvented.Controllers
 
 
         }
+        */
         [Route("update")]
         [HttpGet("{deviceID}/{vendorID}/{name}/{Price}")] //update
         public ActionResult update(int deviceID, int vendorID, string name, double Price)
@@ -83,8 +104,8 @@ namespace electronics_api_reinvented.Controllers
             }
 
         }
-        [Route("delete")]
-        [HttpGet("{deviceID}")]
+        //[Route("delete")] //apî/device/deviceID
+        [HttpDelete("{deviceID}")]
         public ActionResult delete_device(int deviceID)
         {
             var Device_ID = deviceID;
@@ -93,11 +114,13 @@ namespace electronics_api_reinvented.Controllers
                 var device = mycontext.device.Find(Device_ID);
                 mycontext.Remove(device);
                 mycontext.SaveChanges();
-                return Content("removed device with id: "+ deviceID.ToString());
+                return Ok();
+                //return Content("removed device with id: "+ deviceID.ToString());
             }
             catch
             {
-                return Content("failed to remove the device");
+                //return Content("failed to remove the device");
+                return NotFound();
             }
         }
     }

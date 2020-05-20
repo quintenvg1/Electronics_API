@@ -1,5 +1,5 @@
-<p>device-list works!</p>
+<p>device list</p>
+<input type="text" [(ngModel)]="bymanufacturor" placeholder="manufacturor_id">
+<input type="button" value="submit" (click)="submit()">
 
-<div>
-    {{devicelist}}
-</div>
+<div *ngFor="let device of devicelist">{{device.device_name}} device id = {{device.device_ID}}</div>

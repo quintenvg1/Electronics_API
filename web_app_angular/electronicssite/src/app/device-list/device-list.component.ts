@@ -10,6 +10,7 @@ export class DeviceListComponent implements OnInit {
 
   manufacturorname:string; //find by manufacturor
   devicelist;
+  bymanufacturor;
   constructor(private service:ApiserviceService) { }
 
   ngOnInit() {
@@ -19,9 +20,18 @@ export class DeviceListComponent implements OnInit {
 
   fetchlist = () =>{
       var self = this;
-      this.devicelist = this.service.getDeviceList().subscribe((result) => result.Device);
-      console.log(this.devicelist);
-
+      this.devicelist =  this.service.getDeviceList().subscribe(result => {
+        console.log("lijst ontvangen");
+        console.log(result);
+        this.devicelist = result;
+      });
   }
 
+  submit = () =>{
+    this.devicelist = this.service.getspecificDevices(parseInt(this.bymanufacturor)).subscribe(result => {
+      console.log("lijst ontvangen");
+      console.log(result);
+      this.devicelist = result;
+    });
+  }
 }

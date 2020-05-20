@@ -23,6 +23,14 @@ export class ApiserviceService {
     return this.client.get<IDevice>(this.baseurl_device + "/list");
   }
 
+  getspecificDevices(bymanufacturor:number){
+    return this.client.get<IDevice>(this.baseurl_device + "/list/" + bymanufacturor);
+  }
+
+  removespecificDevice(byID:number){
+    return this.client.delete<IfindDevice>(this.baseurl_device+"/"+ byID); //automatically finds the method to delete
+  }
+
 
   
 }
@@ -36,11 +44,14 @@ export class Device{
 }
 
 export interface IfindDevice{ //an interface to find a device on it's id
-  Device_ID:number
+  Device_ID:number,
 }
 
 export interface IDevice{
-  Device : Device[],
+  Device_ID:number,
+  device_name:string,
+  price:number,
+  Manufaturor_ID:number
 }
 
 
