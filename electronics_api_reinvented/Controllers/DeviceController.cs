@@ -11,6 +11,7 @@ namespace electronics_api_reinvented.Controllers
     [ApiController]
     public class DeviceController : ControllerBase
     {
+        public bool loggedin { get; set; } = false;
         [HttpPost] //works completely
         //public object addDevice([FromBody]int Device_ID, string device_name, double price, int Manufaturor_ID)
         public ActionResult<Device> addDevice([FromBody]Device newdevice)
@@ -108,6 +109,14 @@ namespace electronics_api_reinvented.Controllers
         [HttpDelete("{deviceID}")]
         public ActionResult delete_device(int deviceID)
         {
+            /*
+            if (!loggedin)
+            {
+                Redirect("https://localhost:44364/api/basicauth");
+                return Content("you have to login first");
+                
+            }
+            */
             var Device_ID = deviceID;
             try
             {

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiserviceService, IDevice, Device } from '../apiservice.service';
+import { DescriptionserviceService, description } from '../descriptionservice.service';
 
 @Component({
   selector: 'app-device-list',
@@ -11,10 +12,12 @@ export class DeviceListComponent implements OnInit {
   manufacturorname:string; //find by manufacturor
   devicelist;
   bymanufacturor;
-  constructor(private service:ApiserviceService) { }
+  devname: string;
+  description: description;
+  constructor(private service:ApiserviceService, private descriptionservice: DescriptionserviceService) { }
 
   ngOnInit() {
-    this.fetchlist();
+    //this.fetchlist();
     onload = (this.fetchlist);
   }
 
@@ -24,6 +27,12 @@ export class DeviceListComponent implements OnInit {
         console.log("lijst ontvangen");
         console.log(result);
         this.devicelist = result;
+      });
+  }
+
+  describe = () =>{
+      this.descriptionservice.getdescription(this.devname).subscribe(result => {
+        this.description = result;
       });
   }
 

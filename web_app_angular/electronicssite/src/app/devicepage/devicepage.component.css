@@ -1,0 +1,11 @@
+ul{
+    list-style: none;
+}
+div{
+    display: block;
+}
+
+ul li{
+    display: block;
+    background-color: lightblue;
+}

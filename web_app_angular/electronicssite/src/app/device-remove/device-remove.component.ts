@@ -28,6 +28,7 @@ export class DeviceRemoveComponent implements OnInit {
   }
 
   submit = () =>{
+    //check for authorisation
     var self = this;
     self.service.removespecificDevice(parseInt(this.byId)).subscribe();
   }

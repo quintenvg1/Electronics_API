@@ -17,16 +17,57 @@ namespace electronics_api_reinvented.Controllers
         {
             this.mycontext = Context;
         }
-        [Route("list")]
+
+        [HttpPost]
+        public ActionResult AddManufacturor([FromBody] Manufaturor newmanufaturor)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            try
+            {
+                mycontext.manufacturors.Add(newmanufaturor);
+                mycontext.SaveChanges();
+                return Ok();
+            }
+            catch
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpDelete("{ID}")]
+        public ActionResult remove_manufacturor(int ID)
+        {
+            try
+            {
+                var mantoremove = this.mycontext.manufacturors.Find(ID);
+                mycontext.manufacturors.Remove(mantoremove);
+                mycontext.SaveChanges();
+                return Ok();
+            }
+            catch
+            {
+                return NotFound();
+            }
+        }
+
+
+
+        [HttpGet("list")] //returns the list as json?
         public List<Manufaturor> GetManufacturors()
         {
             return mycontext.manufacturors.ToList();
         }
-        [HttpGet]
-        public ActionResult GetAllManufacturors()
+        
+        [HttpGet("list/{ID}")]
+        public List<Manufaturor> GetSpecificManufacturor(int ID)
         {
-            return GetAllManufacturors(); //Create a list from the devices in the database
+            List<Manufaturor> result = new List<Manufaturor>();
+            result.Add(mycontext.manufacturors.Find(ID));
+            return result;
         }
+        
 
 
     }

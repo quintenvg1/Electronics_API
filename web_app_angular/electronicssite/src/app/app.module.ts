@@ -8,6 +8,12 @@ import { DeviceAddComponent } from './device-add/device-add.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DeviceListComponent } from './device-list/device-list.component';
 import { DeviceRemoveComponent } from './device-remove/device-remove.component';
+import { DevicepageComponent } from './devicepage/devicepage.component';
+import { ManufacturorpageComponent } from './manufacturorpage/manufacturorpage.component';
+import { ManufacturorCreateComponent } from './manufacturor-create/manufacturor-create.component';
+import { ManufacturorListComponent } from './manufacturor-list/manufacturor-list.component';
+import { ManufacturorRemoveComponent } from './manufacturor-remove/manufacturor-remove.component';
+import { ManufacturorUpdateComponent } from './manufacturor-update/manufacturor-update.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +21,13 @@ import { DeviceRemoveComponent } from './device-remove/device-remove.component';
     NavbarComponent,
     DeviceAddComponent,
     DeviceListComponent,
-    DeviceRemoveComponent
+    DeviceRemoveComponent,
+    DevicepageComponent,
+    ManufacturorpageComponent,
+    ManufacturorCreateComponent,
+    ManufacturorListComponent,
+    ManufacturorRemoveComponent,
+    ManufacturorUpdateComponent
   ],
   imports: [
     BrowserModule,
