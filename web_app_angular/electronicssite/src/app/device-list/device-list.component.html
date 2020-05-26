@@ -2,16 +2,24 @@
 <input type="text" [(ngModel)]="bymanufacturor" placeholder="manufacturor_id">
 <input type="button" value="submit" (click)="submit()">
 
-<div *ngFor="let device of devicelist">{{device.device_name}} device id = {{device.device_ID}}</div>
+
 
 <input type="text" [(ngModel)]="devname" placeholder="devicename">
 <input type="button" value="find" (click)="describe()">
-<p>{{devname}}</p>
 
-<div *ngFor="let device of description">
-    <ul>
-        <li> name {{device.DeviceName}}</li>
-        <li *ngIf="device.cpu"> cpu {{device.cpu}}</li>
-        <li>{{device.battery_c}}</li>
-    </ul>
+<p *ngIf="devicelist">devices found by manufacturor id</p>
+<div *ngFor="let device of devicelist">{{device.device_name}} device id = {{device.device_ID}}</div>
+
+<div *ngIf="description">
+    <p>descriptions</p>
+    <p>if no devices show up, the device you entered might be to new</p>
+    <div *ngFor="let device of description">
+        <ul>
+            <li> name {{device.DeviceName}}</li>
+            <li *ngIf="device.cpu"> cpu {{device.cpu}}</li>
+            <li>{{device.battery_c}}</li>
+        </ul>
+    </div>
+
 </div>
+
