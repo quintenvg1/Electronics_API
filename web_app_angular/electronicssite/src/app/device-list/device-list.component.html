@@ -1,5 +1,13 @@
 <p>device list</p>
-<input type="text" [(ngModel)]="bymanufacturor" placeholder="manufacturor_id">
+<!-- <input type="text" [(ngModel)]="bymanufacturor" placeholder="manufacturor_id"> -->
+<!-- to replace with ngfor in the near future -->
+<select name="fruit" [(ngModel)]="bymanufacturor" placeholder="name">
+    <option value ="1">Samsung</option>
+    <option value ="2">Huawei</option>
+    <option value ="3">Nokia</option>
+    <option value ="3">Lenovo</option>
+    </select>
+    
 <input type="button" value="submit" (click)="submit()">
 
 
@@ -8,7 +16,7 @@
 <input type="button" value="find" (click)="describe()">
 
 <p *ngIf="devicelist">devices found by manufacturor id</p>
-<div *ngFor="let device of devicelist">{{device.device_name}} device id = {{device.device_ID}}</div>
+<div *ngFor="let device of devicelist">{{device.device_name}} device id = {{device.device_ID}} <input type="button" value="delete" (click)="delete(device.device_ID)"></div>
 
 <div *ngIf="description">
     <p>descriptions</p>
@@ -16,7 +24,7 @@
     <div *ngFor="let device of description">
         <ul>
             <li> name {{device.DeviceName}}</li>
-            <li *ngIf="device.cpu"> cpu {{device.cpu}}</li>
+            <li *ngIf="device.cpu"> cpu {{device.cpu}} </li>
             <li>{{device.battery_c}}</li>
         </ul>
     </div>

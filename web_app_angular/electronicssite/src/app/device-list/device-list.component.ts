@@ -18,7 +18,7 @@ export class DeviceListComponent implements OnInit {
 
   ngOnInit() {
     //this.fetchlist();
-    onload = (this.fetchlist);
+    //onload = (this.fetchlist);
   }
 
   fetchlist = () =>{
@@ -34,6 +34,10 @@ export class DeviceListComponent implements OnInit {
       this.descriptionservice.getdescription(this.devname).subscribe(result => {
         this.description = result;
       });
+  }
+
+  delete = (id) =>{
+    this.service.removespecificDevice(parseInt(id)).subscribe();
   }
 
   submit = () =>{
