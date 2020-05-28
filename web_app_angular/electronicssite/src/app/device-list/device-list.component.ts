@@ -11,12 +11,12 @@ export class DeviceListComponent implements OnInit {
 
   manufacturorname:string; //find by manufacturor
   devicelist;
-  bymanufacturor;
+  bymanufacturor :number = 0;
   devname: string;
   description: description;
   page: number = 0;
   length: number = 3;
-  sort: string = ""; //price || name
+  sort: string = "price"; //price || name
   dir: string = "asc"; //asc||dec
   constructor(private service:ApiserviceService, private descriptionservice: DescriptionserviceService) { }
 
