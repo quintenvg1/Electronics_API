@@ -18,9 +18,12 @@ namespace electronics_api_reinvented.Controllers
 			this.VendorId = VendorID;
 			this.Price = price;
 		}*/
+		
 		public string device_name { get; set; } = "null";
 		[Key]
 		public int Device_ID { get; set; } //auto increment
+
+		
 		public int Manufaturor_ID { get; set; } = 1;
 		public double price { get; set; } = 1.0;
 

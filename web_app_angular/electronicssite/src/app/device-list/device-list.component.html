@@ -5,7 +5,7 @@
     <option value ="1">Samsung</option>
     <option value ="2">Huawei</option>
     <option value ="3">Nokia</option>
-    <option value ="3">Lenovo</option>
+    <option value ="4">Lenovo</option>
     </select>
     
 <input type="button" value="submit" (click)="submit()">
@@ -14,7 +14,11 @@
 
 <input type="text" [(ngModel)]="devname" placeholder="devicename">
 <input type="button" value="find" (click)="describe()">
-
+<ul>
+   <li> <input type="button" value="previous" (click)="previouspage()"> <input type="button" value="next" (click)="nextpage()"> </li> 
+    <li> <input type="text" placeholder="listsize" [(ngModel)]="length"> </li>
+    <p>page =  {{page}}</p>
+</ul>
 <p *ngIf="devicelist">devices found by manufacturor id</p>
 <div *ngFor="let device of devicelist">{{device.device_name}} device id = {{device.device_ID}} <input type="button" value="delete" (click)="delete(device.device_ID)"></div>
 

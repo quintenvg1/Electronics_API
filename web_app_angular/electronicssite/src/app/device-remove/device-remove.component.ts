@@ -20,7 +20,7 @@ export class DeviceRemoveComponent implements OnInit {
 
   fetchlist = () =>{
       var self = this;
-      this.devicelist =  this.service.getDeviceList().subscribe(result => {
+      this.devicelist =  this.service.getDeviceList(0,0).subscribe(result => {
         console.log("lijst ontvangen");
         console.log(result);
         this.devicelist = result;

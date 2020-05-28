@@ -24,8 +24,8 @@ export class ApiserviceService {
     return this.client.post<Device>(this.baseurl_device, newdevice);
   }
 
-  getDeviceList(){
-    return this.client.get<IDevice>(this.baseurl_device + "/list");
+  getDeviceList(page: number, length: number){
+    return this.client.get<IDevice>(this.baseurl_device + "/list?page="+page+"&length="+length); //works for paging
   }
 
   getspecificDevices(bymanufacturor:number){

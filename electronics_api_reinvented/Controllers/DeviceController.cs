@@ -35,8 +35,24 @@ namespace electronics_api_reinvented.Controllers
 
         [Route("list")]
         [HttpGet]
-        public List<Device> GetDevices()
+        public List<Device> GetDevices(int? page = 1, int length = 3)
         {
+            IQueryable<Device> query = mycontext.device;
+            if(length > 0)
+            {
+
+                try
+                {
+                    query = query.Skip(page.Value * length);
+                    query = query.Take(length);
+                    return query.ToList();
+                }
+                catch
+                {
+                    //nothing
+                }
+
+            }
             return mycontext.device.ToList(); //Create a list from the devices in the database
         }
 
