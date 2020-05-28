@@ -35,17 +35,48 @@ namespace electronics_api_reinvented.Controllers
 
         [Route("list")]
         [HttpGet]
-        public List<Device> GetDevices(int? page = 1, int length = 3)
+        public List<Device> GetDevices(int? page = 1, int length = 3, string sort = "", string dir = "", int bymanufacturor = 0)
         {
-            IQueryable<Device> query = mycontext.device;
-            if(length > 0)
+            IQueryable<Device> query = mycontext.device; //get the specific devices
+            if (bymanufacturor != 0) //add paging on specificdevices
             {
+                query = query.Where(d => d.Manufaturor_ID == bymanufacturor);
+                //return query.ToList();
+            }
 
+            if (length > 0)
+            {
+               
                 try
                 {
+                    //paging
                     query = query.Skip(page.Value * length);
                     query = query.Take(length);
-                    return query.ToList();
+                    //sorting
+                    if (sort == "price")
+                    {
+                        if (dir == "asc")
+                        {
+                            query = query.OrderBy(d => d.price);
+                        }
+                        if (dir == "dec")
+                        {
+                            query = query.OrderByDescending(d => d.price);
+                        }
+
+                    }
+                    if(sort == "name")
+                    {
+                        if (dir == "asc")
+                        {
+                            query = query.OrderBy(d => d.device_name);
+                        }
+                        if (dir == "dec")
+                        {
+                            query = query.OrderByDescending(d => d.device_name);
+                        }
+                    }
+                    return query.ToList(); //return the filtered result
                 }
                 catch
                 {
@@ -53,6 +84,7 @@ namespace electronics_api_reinvented.Controllers
                 }
 
             }
+            
             return mycontext.device.ToList(); //Create a list from the devices in the database
         }
 

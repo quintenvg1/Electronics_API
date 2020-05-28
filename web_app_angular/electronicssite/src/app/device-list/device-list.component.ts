@@ -16,6 +16,8 @@ export class DeviceListComponent implements OnInit {
   description: description;
   page: number = 0;
   length: number = 3;
+  sort: string = ""; //price || name
+  dir: string = "asc"; //asc||dec
   constructor(private service:ApiserviceService, private descriptionservice: DescriptionserviceService) { }
 
   ngOnInit() {
@@ -36,7 +38,7 @@ export class DeviceListComponent implements OnInit {
 
   fetchlist = () =>{
       var self = this;
-      this.devicelist =  this.service.getDeviceList(this.page, this.length).subscribe(result => {
+      this.devicelist =  this.service.getDeviceList(this.page, this.length, this.sort, this.dir, this.bymanufacturor).subscribe(result => {
         console.log("lijst ontvangen");
         console.log(result);
         this.devicelist = result;
@@ -54,10 +56,13 @@ export class DeviceListComponent implements OnInit {
   }
 
   submit = () =>{
-    this.devicelist = this.service.getspecificDevices(parseInt(this.bymanufacturor)).subscribe(result => {
+/*
+      this.devicelist = this.service.getDeviceList(0,0, "","", parseInt(this.bymanufacturor)).subscribe(result =>{
       console.log("lijst ontvangen");
       console.log(result);
       this.devicelist = result;
     });
+    */
+   this.fetchlist();
   }
 }

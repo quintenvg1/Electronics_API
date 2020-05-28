@@ -1,7 +1,8 @@
 <p>device list</p>
 <!-- <input type="text" [(ngModel)]="bymanufacturor" placeholder="manufacturor_id"> -->
 <!-- to replace with ngfor in the near future -->
-<select name="fruit" [(ngModel)]="bymanufacturor" placeholder="name">
+<select name="select" [(ngModel)]="bymanufacturor" placeholder="name">
+    <option value="0">all</option>
     <option value ="1">Samsung</option>
     <option value ="2">Huawei</option>
     <option value ="3">Nokia</option>
@@ -16,11 +17,19 @@
 <input type="button" value="find" (click)="describe()">
 <ul>
    <li> <input type="button" value="previous" (click)="previouspage()"> <input type="button" value="next" (click)="nextpage()"> </li> 
-    <li> <input type="text" placeholder="listsize" [(ngModel)]="length"> </li>
+    <li> <input type="text" placeholder="listsize" (change)="fetchlist()" [(ngModel)]="length"> </li>
     <p>page =  {{page}}</p>
+    <select name="sort" [(ngModel)]="sort" id="">
+        <option value="price">price</option>
+        <option value="name">name</option>
+    </select>
+    <select name="direct" [(ngModel)]="dir" (click)="fetchlist()" id="">
+        <option value="asc">ascending</option>
+        <option value="dec">descending</option>
+    </select>
 </ul>
 <p *ngIf="devicelist">devices found by manufacturor id</p>
-<div *ngFor="let device of devicelist">{{device.device_name}} device id = {{device.device_ID}} <input type="button" value="delete" (click)="delete(device.device_ID)"></div>
+<div *ngFor="let device of devicelist">{{device.device_name}} device id = {{device.device_ID}} price = {{device.price}} <input type="button" value="delete" (click)="delete(device.device_ID)"></div>
 
 <div *ngIf="description">
     <p>descriptions</p>
