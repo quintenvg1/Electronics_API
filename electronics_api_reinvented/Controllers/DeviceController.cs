@@ -49,9 +49,7 @@ namespace electronics_api_reinvented.Controllers
                
                 try
                 {
-                    //paging
-                    query = query.Skip(page.Value * length);
-                    query = query.Take(length);
+
                     //sorting
                     if (sort == "price")
                     {
@@ -76,6 +74,9 @@ namespace electronics_api_reinvented.Controllers
                             query = query.OrderByDescending(d => d.device_name);
                         }
                     }
+                    //paging
+                    query = query.Skip(page.Value * length);
+                    query = query.Take(length);
                     return query.ToList(); //return the filtered result
                 }
                 catch
